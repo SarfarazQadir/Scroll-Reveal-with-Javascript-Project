@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Scroll Reveal with Bootstrap</title>
+<link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+  }
+  .container {
+    padding-top: 50px;
+  }
+  .reveal {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.5s ease, transform 0.5s ease;
+  }
+  .revealed {
+    opacity: 1;
+    transform: translateY(0);
+  }
+</style>
+</head>
+<body>
+<div class="container">
+    <h1 class="btn btn-success" style="text-align: center; align-items: center; justify-content: center; display: flex;">Developer Super League TASK Completed By Team Desi Developers</h1>
+  <h1>Welcome to Scroll Reveal </h1>
+  <p class="lead">Scroll down </p>
+  <div class="row">
+    <div class="col-lg-8 offset-lg-2">
+      <div class="reveal" id="revealElement">
+        <h2 class="display-4 text-center">Scroll down to reveal me!</h2>
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-lg-8 offset-lg-2">
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut vitae hendrerit quam, sed consequat leo. Nulla facilisi. Nullam congue augue non mi luctus, in lacinia ipsum dictum. Donec interdum risus vel sapien mattis, id consectetur mauris accumsan. Integer nec libero sit amet lectus pretium eleifend. Mauris interdum mauris quis vehicula vehicula. Nulla facilisi. Integer auctor faucibus dolor, at eleifend orci convallis nec.</p>
+      <!-- Add more content here -->
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-lg-8 offset-lg-2">
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut vitae hendrerit quam, sed consequat leo. Nulla facilisi. Nullam congue augue non mi luctus, in lacinia ipsum dictum. Donec interdum risus vel sapien mattis, id consectetur mauris accumsan. Integer nec libero sit amet lectus pretium eleifend. Mauris interdum mauris quis vehicula vehicula. Nulla facilisi. Integer auctor faucibus dolor, at eleifend orci convallis nec.</p>
+      <!-- Add more content here -->
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-lg-8 offset-lg-2">
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut vitae hendrerit quam, sed consequat leo. Nulla facilisi. Nullam congue augue non mi luctus, in lacinia ipsum dictum. Donec interdum risus vel sapien mattis, id consectetur mauris accumsan. Integer nec libero sit amet lectus pretium eleifend. Mauris interdum mauris quis vehicula vehicula. Nulla facilisi. Integer auctor faucibus dolor, at eleifend orci convallis nec.</p>
+      <!-- Add more content here -->
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-lg-8 offset-lg-2">
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut vitae hendrerit quam, sed consequat leo. Nulla facilisi. Nullam congue augue non mi luctus, in lacinia ipsum dictum. Donec interdum risus vel sapien mattis, id consectetur mauris accumsan. Integer nec libero sit amet lectus pretium eleifend. Mauris interdum mauris quis vehicula vehicula. Nulla facilisi. Integer auctor faucibus dolor, at eleifend orci convallis nec.</p>
+      <!-- Add more content here -->
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-lg-8 offset-lg-2">
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut vitae hendrerit quam, sed consequat leo. Nulla facilisi. Nullam congue augue non mi luctus, in lacinia ipsum dictum. Donec interdum risus vel sapien mattis, id consectetur mauris accumsan. Integer nec libero sit amet lectus pretium eleifend. Mauris interdum mauris quis vehicula vehicula. Nulla facilisi. Integer auctor faucibus dolor, at eleifend orci convallis nec.</p>
+      <!-- Add more content here -->
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-lg-8 offset-lg-2">
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut vitae hendrerit quam, sed consequat leo. Nulla facilisi. Nullam congue augue non mi luctus, in lacinia ipsum dictum. Donec interdum risus vel sapien mattis, id consectetur mauris accumsan. Integer nec libero sit amet lectus pretium eleifend. Mauris interdum mauris quis vehicula vehicula. Nulla facilisi. Integer auctor faucibus dolor, at eleifend orci convallis nec.</p>
+      <!-- Add more content here -->
+    </div>
+  </div>
+</div>
+
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+    const revealElement = document.getElementById("revealElement");
+
+    function revealOnScroll() {
+      const revealPosition = revealElement.getBoundingClientRect().top;
+      const windowHeight = window.innerHeight;
+
+      if (revealPosition < windowHeight / 1.3) {
+        revealElement.classList.add("revealed");
+        window.removeEventListener("scroll", revealOnScroll);
+      }
+    }
+
+    window.addEventListener("scroll", revealOnScroll);
+  });
+</script>
+</body>
+</html>
